@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #0066ff, #0099ff); 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 15px 50px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15); 
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff; 
+  transition: color 0.3s ease;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #fff; 
+  font-size: 1rem;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.menu li a:hover {
+  background: #fff;
+  color: #0066ff; 
+  border-radius: 5px;
+}
+
+/* Navbar scrolled */
+nav.scrolled {
+  background: linear-gradient(90deg, #0044cc, #0066cc); /* Darker gradient on scroll */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* Stronger shadow */
+}
+
+nav.scrolled .logo,
+nav.scrolled .menu li a {
+  color: #fff;
+}
+
+/* Content section */
+.content {
+  margin-top: 100px; 
+  padding: 20px;
+  height: 2000px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #e6f2ff;  
+}
