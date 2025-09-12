@@ -53,9 +53,8 @@ nav {
   border-radius: 5px;
 }
 
-/* Navbar scrolled */
 nav.scrolled {
-  background: linear-gradient(90deg, #0044cc, #0066cc); /* Darker gradient on scroll */
+  background: linear-gradient(#1e1f29, #0149da, #0066cc); /* Darker gradient on scroll */
   box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* Stronger shadow */
 }
 
@@ -64,7 +63,6 @@ nav.scrolled .menu li a {
   color: #fff;
 }
 
-/* Content section */
 .content {
   margin-top: 100px; 
   padding: 20px;
