@@ -4,73 +4,90 @@
   box-sizing: border-box;
 }
 
+ /* Body */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background: #f4f4f4;
+  color: #f1f1f1;
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #6a11cb, #2575fc, #ff6a00, #ff2d95);
+  background-size: 600% 600%;
+  background-attachment: fixed;
+  animation: multiColorFlow 20s ease infinite;
 }
 
+/* Smooth gradient animation */
+@keyframes multiColorFlow {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 50%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* Navbar Base */
 nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(90deg, #0066ff, #0099ff); 
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(90deg, #0a0f1c, #0040ff);
+  transition: background 0.6s ease, box-shadow 0.3s ease;
   padding: 15px 50px;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15); 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Multicolor Animated Gradient when Scrolled */
+nav.scrolled {
+  background: linear-gradient(270deg, #ff4e50, #f9d423, #1fa2ff, #12d8fa, #a6ffcb);
+  background-size: 800% 800%;
+  animation: gradientFlow 12s ease infinite;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #fff; 
-  transition: color 0.3s ease;
+  color: #fff;
+  letter-spacing: 1px;
 }
 
 .menu {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
 .menu li a {
   text-decoration: none;
-  color: #fff; 
+  color: #fff;
   font-size: 1rem;
   padding: 8px 12px;
   transition: all 0.3s ease;
-}
-
-/* Hover effect */
-.menu li a:hover {
-  background: #fff;
-  color: #0066ff; 
   border-radius: 5px;
 }
 
-nav.scrolled {
-  background: linear-gradient(#1e1f29, #0149da, #0066cc); /* Darker gradient on scroll */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* Stronger shadow */
-}
-
-nav.scrolled .logo,
-nav.scrolled .menu li a {
-  color: #fff;
-}
-
+/* Hover Effect */
+.menu li a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.08);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+} 
 .content {
-  margin-top: 100px; 
-  padding: 20px;
-  height: 2000px;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #e6f2ff;  
+  margin-top: 120px;
+  padding: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
